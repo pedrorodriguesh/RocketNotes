@@ -10,11 +10,11 @@ export const Container = styled.div`
         'header'
         'content';
 
-        > main{
-            grid-area: content;
-            overflow-y: scroll;
-            padding: 64px 0;
-        }
+    > main {
+        grid-area: content;
+        overflow-y: scroll;
+        padding: 64px 0;
+    }
 `;
 
 export const Links = styled.ul`
@@ -28,7 +28,6 @@ export const Links = styled.ul`
         }
     }
 `;
-
 
 export const Content = styled.div`
     max-width: 550px;
@@ -52,4 +51,4 @@ export const Content = styled.div`
         margin-top: 16px;
         text-align: justify;
     }
-`
+`;
