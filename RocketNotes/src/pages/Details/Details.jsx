@@ -5,10 +5,7 @@ export function Details(){
   
   return(
     <Container>
-      <h1>Hello World!</h1>
-      <span>Pedro Henrique Rodrigues</span>
-      <Button title="Entrar" />
-      <Button title="Cadastrar" />
+      
       <Button title="Voltar" />
     
     </Container>
