@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Container = styled.header`
     grid-area: header;
 
@@ -29,6 +28,7 @@ export const Profile = styled.div`
         flex-direction: column;
         margin-left: 16px;
         line-height: 24px;
+        
 
         span {
             color: ${({ theme }) => theme.COLORS.GRAY_100};
