@@ -1,6 +1,8 @@
-import { Container, Links } from './styles';
+import { Container, Links, Content } from './styles';
 
-{/* Imports Componentes */}
+{
+    /* Imports Componentes */
+}
 import { Button } from '../../components/Button';
 import { Header } from '../../components/Header';
 import { Section } from '../../components/Section';
@@ -12,25 +14,40 @@ export function Details() {
         <Container>
             <Header></Header>
 
-            <ButtonText title="Excluir Nota" />
+            <main>
+                <Content>
+                    <ButtonText title="Excluir Nota" />
 
-            <Section title="Links úteis">
-                <Links>
-                    <li>
-                        <a href="#">https://www.github.com/pedrorodriguesh</a>
-                    </li>
-                    <li>
-                        <a href="#">https://rocketseat.com.br/</a>
-                    </li>
-                </Links>
-            </Section>
+                    <h1>Introdução ao React</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Esse quibusdam amet nam deleniti enim neque
+                        dolorem, asperiores quidem ad maiores quaerat,
+                        cupiditate, eveniet earum mollitia nulla ipsam fugiat
+                        porro minus.
+                    </p>
 
-            <Section title="Marcadores">
-                <Tag title="Express" />
-                <Tag title="Nodejs" />
-            </Section>
+                    <Section title="Links úteis">
+                        <Links>
+                            <li>
+                                <a href="#">
+                                    https://www.github.com/pedrorodriguesh
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">https://rocketseat.com.br/</a>
+                            </li>
+                        </Links>
+                    </Section>
 
-            <Button title="Voltar" />
+                    <Section title="Marcadores">
+                        <Tag title="Express" />
+                        <Tag title="Nodejs" />
+                    </Section>
+
+                    <Button title="Voltar" />
+                </Content>
+            </main>
         </Container>
     );
 }
