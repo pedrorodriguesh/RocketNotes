@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+const name = "my name"
 
 export const Container = styled.header`
   grid-area: header;
