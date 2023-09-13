@@ -6,7 +6,9 @@ export function Details(){
   
   return(
     <Container>
-      <Header></Header>
+      <Header>
+        
+      </Header>
       <Button title="Voltar" />
     
     </Container>
