@@ -18,25 +18,47 @@ export const Container = styled.div`
 
 export const Brand = styled.div`
     grid-area: brand;
-    background: red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+    > h1 {
+        font-size: 24px;
+        color: ${({ theme }) => theme.COLORS.ORANGE};
+    }
 `;
 
 export const Menu = styled.ul`
     grid-area: menu;
-    background: green;
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+    > button {
+        font-size: 16px;
+        color: ${({ theme }) => theme.COLORS.GRAY_100};
+    }
+
+    > button:first-of-type {
+        margin-top: 64px;
+    }
 `;
 
 export const Search = styled.div`
     grid-area: search;
-    background: violet;
 `;
 
 export const Content = styled.div`
     grid-area: content;
-    background: blue;
 `;
 
 export const NewNote = styled.button`
     grid-area: newnote;
-    background: orange;
 `;
