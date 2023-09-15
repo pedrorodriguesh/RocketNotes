@@ -36,22 +36,11 @@ export const Menu = styled.ul`
     grid-area: menu;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
-    display: flex;
-    flex-direction: column;
+    padding-top: 64px;
+    text-align: center;
 
-    gap: 24px;
-
-    > button {
-        font-size: 16px;
-        color: ${({ theme }) => theme.COLORS.GRAY_100};
-    }
-
-    > button:active{
-        color: ${({theme}) => theme.COLORS.ORANGE};
-    }
-
-    > button:first-of-type {
-        margin-top: 64px;
+    > li {
+        margin-bottom: 24px;
     }
 `;
 
@@ -65,4 +54,19 @@ export const Content = styled.div`
 
 export const NewNote = styled.button`
     grid-area: newnote;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: ${({ theme }) => theme.COLORS.ORANGE};
+    border: none;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    > svg {
+        font-size: 24px;
+    }
 `;

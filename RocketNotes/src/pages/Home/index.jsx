@@ -2,6 +2,7 @@ import { Container, Brand, Menu, Search, Content, NewNote } from './style';
 
 import { Header } from '../../components/Header';
 import { ButtonText } from '../../components/ButtonText';
+import { BiPlus } from 'react-icons/bi';
 
 export function Home() {
     return (
@@ -13,17 +14,28 @@ export function Home() {
             <Header />
 
             <Menu>
-                <ButtonText title="Todos" isActive />
-                <ButtonText title="Frontend" />
-                <ButtonText title="Node" />
-                <ButtonText title="React" />
+                <li>
+                    <ButtonText title="Todos" $isactive />
+                </li>
+                <li>
+                    <ButtonText title="Frontend" />
+                </li>
+                <li>
+                    <ButtonText title="Node" />
+                </li>
+                <li>
+                    <ButtonText title="React" />
+                </li>
             </Menu>
 
             <Search></Search>
 
             <Content></Content>
 
-            <NewNote></NewNote>
+            <NewNote>
+                <BiPlus />
+                <p>Criar Nota</p>
+            </NewNote>
         </Container>
     );
 }
