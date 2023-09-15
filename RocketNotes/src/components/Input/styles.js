@@ -21,7 +21,7 @@ export const Container = styled.div`
         background: transparent;
         border: 0;
 
-        &::placeholder {
+        &::placeholder { // mexendo no placeholder, aqui no styled-components usa o &: para acessar uma sudoclass
             color: ${({ theme }) => theme.COLORS.GRAY_300};
         }
     }
