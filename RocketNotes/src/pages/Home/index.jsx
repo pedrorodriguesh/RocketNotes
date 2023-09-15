@@ -1,9 +1,11 @@
 import { Container, Brand, Menu, Search, Content, NewNote } from './style';
+import { BiPlus, BiSearch } from 'react-icons/bi';
 
 import { Header } from '../../components/Header';
 import { ButtonText } from '../../components/ButtonText';
 import { Input } from '../../components/Input';
-import { BiPlus, BiSearch } from 'react-icons/bi';
+import { Section } from '../../components/Section';
+import { Note } from '../../components/Note';
 
 export function Home() {
     return (
@@ -30,10 +32,23 @@ export function Home() {
             </Menu>
 
             <Search>
-                <Input placeholder="Pesquisar pelo título" icon={BiSearch}/>
+                <Input placeholder="Pesquisar pelo título" icon={BiSearch} />
             </Search>
 
-            <Content></Content>
+            <Content>
+                <Section title="Minhas Notas">
+                    <Note
+                        data={{
+                            title: 'React',
+                            tags: [
+                                { id: '1', name: 'react' },
+                                { id: '2', name: 'nodejs'},
+                                { id: '3', name: 'rocketseat'}
+                            ],
+                        }}
+                    />
+                </Section>
+            </Content>
 
             <NewNote>
                 <BiPlus />
