@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import { Home } from './pages/Home'; // componente importado
+import { Details } from './pages/Details'
 
 import { ThemeProvider } from 'styled-components'; // tema global da página
 import theme from './styles/theme';
