@@ -2,7 +2,8 @@ import { Container, Brand, Menu, Search, Content, NewNote } from './style';
 
 import { Header } from '../../components/Header';
 import { ButtonText } from '../../components/ButtonText';
-import { BiPlus } from 'react-icons/bi';
+import { Input } from '../../components/Input';
+import { BiPlus, BiSearch } from 'react-icons/bi';
 
 export function Home() {
     return (
@@ -28,7 +29,9 @@ export function Home() {
                 </li>
             </Menu>
 
-            <Search></Search>
+            <Search>
+                <Input placeholder="Pesquisar pelo título" icon={BiSearch}/>
+            </Search>
 
             <Content></Content>
 
