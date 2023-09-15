@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { Home } from './pages/Home'; // componente importado
+// Importação das Páginas
+import { Home } from './pages/Home';
 import { Details } from './pages/Details'
+import { SignIn } from './pages/Signin';
 
 import { ThemeProvider } from 'styled-components'; // tema global da página
 import theme from './styles/theme';
@@ -12,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <ThemeProvider theme={theme}>
             <GlobalStyles />
-            <Home />
+            <SignIn />
         </ThemeProvider>
     </React.StrictMode>
 );
