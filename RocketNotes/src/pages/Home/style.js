@@ -46,6 +46,10 @@ export const Menu = styled.ul`
         color: ${({ theme }) => theme.COLORS.GRAY_100};
     }
 
+    > button:active{
+        color: ${({theme}) => theme.COLORS.ORANGE};
+    }
+
     > button:first-of-type {
         margin-top: 64px;
     }

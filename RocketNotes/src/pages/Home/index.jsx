@@ -1,7 +1,7 @@
 import { Container, Brand, Menu, Search, Content, NewNote } from './style';
 
 import { Header } from '../../components/Header';
-import { ButtonText } from '../../components/ButtonText'
+import { ButtonText } from '../../components/ButtonText';
 
 export function Home() {
     return (
@@ -13,23 +13,17 @@ export function Home() {
             <Header />
 
             <Menu>
-                <ButtonText title="Todos"/>
-                <ButtonText title="Frontend"/>
-                <ButtonText title="Node"/>
-                <ButtonText title="React"/>
+                <ButtonText title="Todos" isActive />
+                <ButtonText title="Frontend" />
+                <ButtonText title="Node" />
+                <ButtonText title="React" />
             </Menu>
 
-            <Search>
+            <Search></Search>
 
-            </Search>
+            <Content></Content>
 
-            <Content>
-
-            </Content>
-
-            <NewNote>
-
-            </NewNote>
+            <NewNote></NewNote>
         </Container>
     );
 }
