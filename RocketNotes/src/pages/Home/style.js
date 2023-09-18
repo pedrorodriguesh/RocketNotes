@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
     width: 100%;
@@ -55,7 +56,7 @@ export const Content = styled.div`
     overflow-y: auto;
 `;
 
-export const NewNote = styled.button`
+export const NewNote = styled(Link)`
     grid-area: newnote;
 
     display: flex;
@@ -64,6 +65,8 @@ export const NewNote = styled.button`
     gap: 10px;
 
     background-color: ${({ theme }) => theme.COLORS.ORANGE};
+    color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
     border: none;
 
     font-size: 16px;

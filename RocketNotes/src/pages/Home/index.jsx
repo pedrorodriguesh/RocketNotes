@@ -50,10 +50,12 @@ export function Home() {
                 </Section>
             </Content>
 
-            <NewNote>
+                        
+            <NewNote to="new">
                 <BiPlus />
                 <p>Criar Nota</p>
             </NewNote>
+
         </Container>
     );
 }
