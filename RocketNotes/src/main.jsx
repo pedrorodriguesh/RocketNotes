@@ -2,12 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 // Importação das Páginas
-import { Home } from './pages/Home';
-import { Details } from './pages/Details'
-import { SignIn } from './pages/Signin';
-import { SignUp } from './pages/SignUp';
-import { Profile } from './pages/Profile';
-import { New } from './pages/New';
+
+import { Routes } from './routes';
 
 import { ThemeProvider } from 'styled-components'; // tema global da página
 import theme from './styles/theme';
@@ -17,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <ThemeProvider theme={theme}>
             <GlobalStyles />
-            <New />
+            <Routes />
         </ThemeProvider>
     </React.StrictMode>
 );
