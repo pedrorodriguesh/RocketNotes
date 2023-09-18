@@ -10,7 +10,7 @@ import theme from './styles/theme';
 
 ReactDOM.createRoot(document.getElementById('root')).render( 
     <React.StrictMode>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}> {/* O <ThemeProvider> envelopa a aplicação, ele trás os temas setados por nós em theme.js */}
             <GlobalStyles />
             <Routes />
         </ThemeProvider>
