@@ -67,7 +67,5 @@ export const Avatar = styled.div`
             height: 20px;
             color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
         }
-
-        
     }
 `;
