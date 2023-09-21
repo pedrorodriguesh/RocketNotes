@@ -6,6 +6,7 @@ import { ButtonText } from '../../components/ButtonText';
 import { Input } from '../../components/Input';
 import { Section } from '../../components/Section';
 import { Note } from '../../components/Note';
+import { Button } from '../../components/Button';
 
 export function Home() {
     return (
@@ -47,6 +48,7 @@ export function Home() {
                             ],
                         }}
                     />
+                    <Button title="Rafael Pereira"/>
                 </Section>
             </Content>
 
