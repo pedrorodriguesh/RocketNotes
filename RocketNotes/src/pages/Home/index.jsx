@@ -48,7 +48,6 @@ export function Home() {
                             ],
                         }}
                     />
-                    <Button title="Rafael Pereira"/>
                 </Section>
             </Content>
 
