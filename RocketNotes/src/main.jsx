@@ -8,11 +8,15 @@ import { ThemeProvider } from 'styled-components'; // Definição dos temas e co
 import GlobalStyles from './styles/global'; // CSS Global da página, background-color, reset css, font-family, etc.
 import theme from './styles/theme';
 
+import { AuthProvider } from './hooks/auth';
+
 ReactDOM.createRoot(document.getElementById('root')).render( 
     <React.StrictMode>
         <ThemeProvider theme={theme}> {/* O <ThemeProvider> envelopa a aplicação, ele trás os temas setados por nós em theme.js */}
             <GlobalStyles />
-            <Routes />
+                <AuthProvider>
+                    <Routes />
+                </AuthProvider>
         </ThemeProvider>
     </React.StrictMode>
 );
