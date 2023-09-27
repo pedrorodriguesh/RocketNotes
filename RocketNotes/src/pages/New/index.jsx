@@ -2,7 +2,7 @@ import { Textarea } from '../../components/Textarea';
 import { NoteItem } from '../../components/NoteItem';
 import { Section } from '../../components/Section';
 import { Header } from '../../components/Header';
-import { Button } from '../../components/Button'
+import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 import { Link } from 'react-router-dom';
 
