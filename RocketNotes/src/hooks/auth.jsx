@@ -29,15 +29,22 @@ export function AuthProvider({ children }) {
         }
     }
 
+    function signOut() {
+        localStorage.removeItem('@rocketnotes:token');
+        localStorage.removeItem('@rocketnotes:user');
+
+        setData({});
+    }
+
     useEffect(() => {
         // ### PEGANDO os dados que foram salvados no localStorage
-        const token = localStorage.getItem('@rocketnotes:token'); 
+        const token = localStorage.getItem('@rocketnotes:token');
         const user = localStorage.getItem('@rocketnotes:user');
 
         if (token && user) {
             api.defaults.headers.authorization = `Bearer ${token}`;
 
-        // ### Aqui eu estou preenchendo o estado "data" novamente, dessa vez, com os dados que estavam salvos no localStorage.
+            // ### Aqui eu estou preenchendo o estado "data" novamente, dessa vez, com os dados que estavam salvos no localStorage.
             setData({
                 token,
                 user: JSON.parse(user), // voltando o user para um objeto JSON, depois de ter transformado em string lá em cima.
@@ -47,7 +54,11 @@ export function AuthProvider({ children }) {
 
     return (
         <AuthContext.Provider // aqui tá devolvendo o provider, que encapsulára as rotas da aplicação, lá no main.jsx.
-            value={{ signIn, user: data.user }}
+            value={{ 
+                signIn,
+                signOut, 
+                user: data.user
+             }}
         >
             {children}
         </AuthContext.Provider>
