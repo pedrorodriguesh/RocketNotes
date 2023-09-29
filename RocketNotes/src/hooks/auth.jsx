@@ -14,7 +14,8 @@ export function AuthProvider({ children }) {
             const response = await api.post('/sessions', { email, password });
             const { user, token } = response.data;
 
-            localStorage.setItem('@rocketnotes:user', JSON.stringify(user));
+            // ## Salvando os dados no local storage.
+            localStorage.setItem('@rocketnotes:user', JSON.stringify(user)); // user é um objeto, aqui o JSON.strigify formata para um texto.
             localStorage.setItem('@rocketnotes:token', token);
 
             api.defaults.headers.authorization = `Bearer ${token}`;
@@ -29,15 +30,17 @@ export function AuthProvider({ children }) {
     }
 
     useEffect(() => {
-        const token = localStorage.getItem('@rocketnotes:token');
+        // ### PEGANDO os dados que foram salvados no localStorage
+        const token = localStorage.getItem('@rocketnotes:token'); 
         const user = localStorage.getItem('@rocketnotes:user');
 
         if (token && user) {
             api.defaults.headers.authorization = `Bearer ${token}`;
 
+        // ### Aqui eu estou preenchendo o estado "data" novamente, dessa vez, com os dados que estavam salvos no localStorage.
             setData({
                 token,
-                user: JSON.parse(user),
+                user: JSON.parse(user), // voltando o user para um objeto JSON, depois de ter transformado em string lá em cima.
             });
         }
     }, []);
