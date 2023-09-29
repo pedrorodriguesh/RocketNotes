@@ -18,11 +18,13 @@ export function SignUp() {
 
     const navigate = useNavigate();
 
+    // ### Função onClick no botão de registrar.
     function handleSignUp() {
         if (!name || !email || !password) {
             return alert('Preencha todos os campos!');
         }
 
+        // Método POST no endpoint '/users'.
         api.post('/users', { name, email, password })
             .then(() => {
                 alert('Usuário cadastrado com sucesso!');
@@ -50,19 +52,19 @@ export function SignUp() {
                     placeholder="Nome"
                     type="text"
                     icon={FiUser}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setName(e.target.value)} // ## => HookState, a função setName que foi determinada lá em cima aqui pega o value do input. 
                 />
                 <Input
                     placeholder="E-mail"
                     type="text"
                     icon={FiMail}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value)} // ## => HookState, a função setName que foi determinada lá em cima aqui pega o value do input. 
                 />
                 <Input
                     placeholder="Senha"
                     type="password"
                     icon={FiLock}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value)} // ## => HookState, a função setName que foi determinada lá em cima aqui pega o value do input. 
                 />
 
                 <Button title="Cadastrar" onClick={handleSignUp} />
