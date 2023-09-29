@@ -6,11 +6,12 @@ import { Input } from '../../components/Input';
 import { FiMail, FiLock, FiUser } from 'react-icons/fi';
 // ### Hooks
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState } from 'react'; // => Deixa um componente se "lembrar" de algo, como no input de usuário e senha.
 // ## Api
-import { api } from '../../services/api'; 
+import { api } from '../../services/api';
 
 export function SignUp() {
+    // ### useState Hook para os 3 inputs de cadastro, user, email e password.
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
