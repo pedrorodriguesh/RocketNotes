@@ -13,7 +13,7 @@ import { api } from '../../services/api';
 export function SignUp() {
     // ### useState Hook para os 3 inputs de cadastro, user, email e password.
     const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState(''); // aqui em useState(), define o valor inicial do estado.
     const [password, setPassword] = useState('');
 
     const navigate = useNavigate();
