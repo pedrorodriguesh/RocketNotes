@@ -18,7 +18,8 @@ export function AuthProvider({ children }) {
             localStorage.setItem('@rocketnotes:user', JSON.stringify(user)); // user é um objeto, aqui o JSON.strigify formata para um texto.
             localStorage.setItem('@rocketnotes:token', token);
 
-            api.defaults.headers.authorization = `Bearer ${token}`;
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
             setData({ user, token }); // função do useState guardando, dentro da variável "data" as informações.
         } catch (error) {
             if (error.response) {
@@ -42,7 +43,8 @@ export function AuthProvider({ children }) {
         const user = localStorage.getItem('@rocketnotes:user');
 
         if (token && user) {
-            api.defaults.headers.authorization = `Bearer ${token}`;
+            
+             api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
             // ### Aqui eu estou preenchendo o estado "data" novamente, dessa vez, com os dados que estavam salvos no localStorage.
             setData({
