@@ -1,13 +1,12 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { api } from '../services/api'
 
-export const AuthContext = createContext({});
+export const AuthContext = createContext({}); // ## Criando o contexto de autenticação.
 
 export function AuthProvider({ children }) {
     const [data, setData] = useState({})
 
     async function signIn({ email, password }) {
-
         try{
             const response = await api.post("/sessions", { email, password })
             const { user, token } = response.data
@@ -42,7 +41,7 @@ export function AuthProvider({ children }) {
     }, [])
 
     return (
-        <AuthContext.Provider
+        <AuthContext.Provider // aqui tá devolvendo o provider, que encapsulára as rotas da aplicação, lá no main.jsx.
             value={{ signIn, user: data.user }}
         >
             {children}
