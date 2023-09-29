@@ -37,14 +37,29 @@ export function AuthProvider({ children }) {
         setData({});
     }
 
+    async function updateProfile({ user }) {
+        try {
+            await api.put('/users', user);
+            localStorage.setItem('@rocketnotes:user', JSON.stringify(user));
+
+            setData({ user, token: data.token });
+            alert('Perfil atualizado!')
+        } catch (error) {
+            if (error.response) {
+                alert(error.response.data.message);
+            } else {
+                alert('Não foi possível atualizar os dados do perfil!');
+            }
+        }
+    }
+
     useEffect(() => {
         // ### PEGANDO os dados que foram salvados no localStorage
         const token = localStorage.getItem('@rocketnotes:token');
         const user = localStorage.getItem('@rocketnotes:user');
 
         if (token && user) {
-            
-             api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
             // ### Aqui eu estou preenchendo o estado "data" novamente, dessa vez, com os dados que estavam salvos no localStorage.
             setData({
@@ -56,11 +71,12 @@ export function AuthProvider({ children }) {
 
     return (
         <AuthContext.Provider // aqui tá devolvendo o provider, que encapsulára as rotas da aplicação, lá no main.jsx.
-            value={{ 
+            value={{
                 signIn,
-                signOut, 
-                user: data.user
-             }}
+                signOut,
+                updateProfile,
+                user: data.user,
+            }}
         >
             {children}
         </AuthContext.Provider>
