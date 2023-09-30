@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 export function Profile() {
     const { user, updateProfile } = useAuth();
 
+    // ### Aqui o use state pega os dados que já estão no usuário que está logado.
     const [name, setName] = useState(user.name);
     const [email, setEmail] = useState(user.email);
     const [passwordOld, setPasswordOld] = useState('');
