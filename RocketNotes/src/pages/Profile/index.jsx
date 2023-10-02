@@ -89,5 +89,5 @@ export function Profile() {
                 <Button title="Salvar" onClick={handleUpdate} />
             </Form>
         </Container>
-    );
+    )
 }
