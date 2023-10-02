@@ -7,7 +7,7 @@ import { FiMail, FiLock, FiUser } from 'react-icons/fi';
 // ### Hooks
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react'; // => Deixa um componente se "lembrar" de algo, como no input de usuário e senha.
-// ## Api
+// ## Api - Axios
 import { api } from '../../services/api';
 
 export function SignUp() {
