@@ -9,7 +9,6 @@ import { ButtonText } from '../../components/ButtonText';
 import { Input } from '../../components/Input';
 import { Section } from '../../components/Section';
 import { Note } from '../../components/Note';
-import { Button } from '../../components/Button';
 
 import { api } from '../../services/api.js';
 
