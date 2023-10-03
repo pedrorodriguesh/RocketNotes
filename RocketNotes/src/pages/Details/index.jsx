@@ -23,12 +23,12 @@ export function Details() {
 
         if(confirm){
             await api.delete(`/notes/${params.id}`)
-            navigate('/')
+            navigate(-1)
         }
     }
 
     function handleBack(){
-        navigate('/')
+        navigate(-1)
     }
 
     useEffect(() => {
