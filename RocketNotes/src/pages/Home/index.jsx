@@ -14,6 +14,7 @@ import { Button } from '../../components/Button';
 import { api } from '../../services/api.js';
 
 export function Home() {
+    // ### Setando estados para mandar para o backend.
     const [tags, setTags] = useState([]);
     const [tagsSelected, setTagsSelected] = useState([]);
     const [search, setSearch] = useState('')
