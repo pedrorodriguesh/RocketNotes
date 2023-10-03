@@ -8,6 +8,8 @@ export const AuthContext = createContext({}); // ## Criando o contexto de autent
 export function AuthProvider({ children }) {
     const [data, setData] = useState({}); // + 1 estado que vai guardar os dados do usuário e o token de autenticação.
 
+
+    
     // ## Função que vai fazer o post no endpoint /sessions da API.
     async function signIn({ email, password }) {
         try {
