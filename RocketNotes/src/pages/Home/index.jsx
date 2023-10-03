@@ -4,7 +4,7 @@ import { BiPlus, BiSearch } from 'react-icons/bi';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Header } from '../../components/Header';
+import { Header } from '../../components/Header/index.jsx';
 import { ButtonText } from '../../components/ButtonText';
 import { Input } from '../../components/Input';
 import { Section } from '../../components/Section';

@@ -78,6 +78,7 @@ export function Details() {
                     }
 
                     <Button title="Voltar" onClick={handleBack} />
+
                 </Content>
             </main>
             }
