@@ -11,6 +11,7 @@ import { Button } from '../../components/Button';
 import { Container, Form, Background } from './styles'; 
 
 export function SignIn() {
+    // ### Criando os estados que vão guardar os dados inseridos no input.
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
