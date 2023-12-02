@@ -1,5 +1,5 @@
-import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { FiMail, FiLock } from 'react-icons/fi';
+import { Link } from 'react-router-dom'; 
 
 import { useState } from 'react';
 
